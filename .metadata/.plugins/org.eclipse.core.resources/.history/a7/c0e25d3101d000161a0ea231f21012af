@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Rectangles Circles</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="calculate_perimeter_area_rectangles">Calculate perimeter, area of Rectangles</string>
+    <string name="input_length">Input length of Rectanges here</string>
+    <string name="input_width">Input width of Rectangles here</string>
+    <string name="calculate_for_rectangles">Calculate</string>
+    <string name="calculate_for_circles">Calculate</string>
+    <string name="calculate_perimeter_area_circles">Calculate perimeter, area of Circles</string>
+    
+
+</resources>

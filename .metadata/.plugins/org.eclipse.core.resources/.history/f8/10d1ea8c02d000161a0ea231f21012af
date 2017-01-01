@@ -1,0 +1,28 @@
+package com.dao.perimeter_area_rectangles_circles;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+
+	private EditText edtLength, edtWidth, edtRadius;
+	private Button btnCalculateForRectangles, btnCalculateForCircles;
+	private TextView txtResultOfRectangles, txtResultOfCircles;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		//Mapped
+		onMapped();
+	}
+
+	private void onMapped() {
+		// TODO Auto-generated method stub
+		edtLength = (EditText) findViewById(R.id.edtLength;)
+	}
+}

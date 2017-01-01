@@ -1,0 +1,63 @@
+package com.dao.perimeter_area_rectangles_circles;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+
+	private EditText edtLength, edtWidth, edtRadius;
+	private Button btnCalculateForRectangles, btnCalculateForCircles;
+	private TextView txtResultOfRectangles, txtResultOfCircles;
+	
+	private final float PI = 3.14f;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		//Mapped
+		onMapped();
+		
+		//Catch even when click button
+		onClickButton();
+	}
+
+	private void onClickButton() {
+		btnCalculateForRectangles.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				//Convert input from EditText to String and continue convert to Float number
+				Float lengthOfRectangles = Float.valueOf(edtLength.getText().toString());				
+				Float widthOfRectangles = Float.valueOf(edtWidth.getText().toString());
+				Float radiusOfCircles = Float.valueOf(edtRadius.getText().toString()); 
+				
+//				//or way 2 to convert:
+//				float length_of_rectangles = Float.parseFloat(edtLength.getText().toString());
+//				float width_of_rectangles = Float.parseFloat(edtLength.getText().toString());
+//				float radius_of_circles = Float.parseFloat(edtRadius.getText().toString());
+				
+				//Declare variables: perimeter, area of Rectangles and Circles
+				Float perimeterOfRectangles = 0f;
+				Float areaOfRectangles = 1f;
+				Float perimeterOfCircles = radiusOfCircles*2*PI;
+				
+				
+			}
+		});
+	}
+
+	private void onMapped() {
+		edtLength = (EditText) findViewById(R.id.edtLength);
+		edtWidth = (EditText) findViewById(R.id.edtWidth);
+		edtRadius = (EditText) findViewById(R.id.edtRadius);
+		btnCalculateForRectangles = (Button) findViewById(R.id.btnCalculateForRectangles);
+		btnCalculateForCircles = (Button) findViewById(R.id.btnCalculateForCircles);
+		txtResultOfRectangles = (TextView) findViewById(R.id.txtResultOfRectangles);
+		txtResultOfCircles = (TextView) findViewById(R.id.txtResultOfCircles);
+	}
+}
